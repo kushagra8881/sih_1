@@ -8,17 +8,18 @@ import base64
 import gdown
 
 # Function to download the model from Google Drive
-@st.cache_resource
-def download_model_from_drive(file_id, output_path):
-    url = f'https://drive.google.com/uc?id={file_id}'
-    gdown.download(url, output_path, quiet=False)
+# @st.cache_resource
+# def download_model_from_drive(file_id, output_path):
+#     url = f'https://drive.google.com/uc?id={file_id}'
+#     gdown.download(url, output_path, quiet=False)
 
 # Load the VGG-19 model from Google Drive
 @st.cache_resource
 def load_model():
     model_path = 'VGG_19_model.h5'
-    drive_file_id = '1mnTChV2-KcALBvIU0yw63ISs3nPX4lq0' 
-    download_model_from_drive(drive_file_id, model_path)
+    # drive_file_id = '1mnTChV2-KcALBvIU0yw63ISs3nPX4lq0' 
+    # download_model_from_drive(drive_file_id, model_path)
+    
     return tf.keras.models.load_model(
         model_path,
         custom_objects={'ExponentialDecay': tf.keras.optimizers.schedules.ExponentialDecay}
