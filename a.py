@@ -148,6 +148,6 @@ if st.button('Access Sample Images'):
 # Add a footer
 st.markdown("""
     <div class="footer">
-        <p>Powered by VGG-19 | Developed with ❤️ by ???</p>
+        <p>Powered by VGG-19 | Developed with ❤️ by Humming Birds </p>
     </div>
 """, unsafe_allow_html=True)
