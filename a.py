@@ -98,7 +98,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("🤖 AeroGuard AI")
+st.title("🤖 DRONE-VYUH")
 st.write("Upload an image to classify if it's a drone or bird.")
 
 # Upload Image
